@@ -12,7 +12,7 @@ export const contact = {
     },
     LinkedIn: {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/ofren-dialsa/n",
+      url: "https://www.linkedin.com/in/ofren-dialsa/",
       icon: Icons.linkedin,
       navbar: true,
     },

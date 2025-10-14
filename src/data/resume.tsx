@@ -20,7 +20,7 @@ export const DATA = {
   avatarUrl: "/me.png",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
 
   skills: skills,
