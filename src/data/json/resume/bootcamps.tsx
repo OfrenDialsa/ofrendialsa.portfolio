@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons";
 export const bootcamps = [
   {
     title: "Bangkit Academy 2024 Batch 2 - Mobile Development Path",
-    dates: "Sept - Dec, 2024",
+    dates: "Sept - Dec 2024",
     location: "Remote",
     description:
       "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
@@ -13,7 +13,7 @@ export const bootcamps = [
   },
   {
     title: "AWS Backend Academy 2025",
-    dates: "April - Dec, 2025",
+    dates: "April - Dec 2025",
     location: "Remote",
     description:
       "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
