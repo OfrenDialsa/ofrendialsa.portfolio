@@ -24,7 +24,7 @@ export const projects = [
       },
     ],
     image:
-      "https://raw.githubusercontent.com/OfrenDialsa/portfoliomedia/refs/heads/main/Untitled%20design%20(3).png?token=GHSAT0AAAAAADCNRSZVF2KHCPDSFRZGWYJO2HQ7YCQ",
+      "https://qfnp44np2u2fkofa.public.blob.vercel-storage.com/photo/Untitled%20design%20%283%29.png",
   },
   {
     title: "Gentamin",

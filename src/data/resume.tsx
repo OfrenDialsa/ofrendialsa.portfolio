@@ -5,6 +5,7 @@ import { education } from "./json/resume/education";
 import { projects } from "./json/resume/projects";
 import { bootcamps } from "./json/resume/bootcamps";
 import { skills } from "./json/resume/skills";
+import { certificates } from "./json/resume/certificates";
 
 export const DATA = {
   name: "Ofren Dialsa",
@@ -28,4 +29,5 @@ export const DATA = {
   education: education,
   projects: projects,
   bootcamps: bootcamps,
+  certificates: certificates
 } as const;
