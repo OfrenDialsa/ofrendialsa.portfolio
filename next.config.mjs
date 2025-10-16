@@ -18,6 +18,11 @@ const nextConfig = {
         hostname: "github.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "qfnp44np2u2fkofa.public.blob.vercel-storage.com",
+        pathname: "/**",
+      },
     ],
   },
 };

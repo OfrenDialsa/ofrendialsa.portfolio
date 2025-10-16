@@ -29,12 +29,6 @@ export function BootcampsCard({
   image,
   links,
 }: Props) {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-
-  const handleToggle = () => {
-    if (description) setIsExpanded(!isExpanded);
-  };
-
   return (
     <li className="relative ml-10 py-4">
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
@@ -44,35 +38,30 @@ export function BootcampsCard({
         </Avatar>
       </div>
 
-      <div
-        className="flex flex-1 flex-col justify-start gap-1 cursor-pointer group"
-        onClick={handleToggle}
-      >
+      <div className="flex flex-1 flex-col justify-start gap-1">
         {dates && (
           <time className="text-xs text-muted-foreground">{dates}</time>
         )}
+
         <div className="flex items-center justify-between">
           <h2 className="font-semibold leading-none flex items-center gap-1">
             {title}
             <ChevronRightIcon
               className={cn(
-                "size-4 transition-transform duration-300 ease-out text-muted-foreground group-hover:translate-x-0.5",
-                isExpanded ? "rotate-90" : "rotate-0"
+                "size-4 text-muted-foreground opacity-50 transition-transform duration-300 ease-out group-hover:translate-x-0.5"
               )}
             />
           </h2>
         </div>
+
         {location && (
           <p className="text-sm text-muted-foreground">{location}</p>
         )}
 
         {description && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{
-              opacity: isExpanded ? 1 : 0,
-              height: isExpanded ? "auto" : 0,
-            }}
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="mt-1 text-sm text-muted-foreground prose dark:prose-invert"
           >
