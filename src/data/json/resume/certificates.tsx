@@ -5,7 +5,7 @@ export const certificates = [
       date: "Sept 2025",
       description:
         "Completed an intensive program covering React, Node.js, and database management.",
-      image: "/certificates/aws_intermediate.png",
+      image: "/certificates/aws_intermediate.webp",
       link: "https://drive.google.com/file/d/1NEumEzbDrUw9KdAgIJ-vFiarJT9CReo1/edit",
       tags: ["Hapi.js", "Node.js", "API", "Postman", "SQL"],
     },
@@ -15,7 +15,7 @@ export const certificates = [
       date: "Jan 2025",
       description:
         "Advanced certification focusing on performance optimization, accessibility, and modern frontend tooling.",
-      image: "/certificates/bangkit.png",
+      image: "/certificates/bangkit.webp",
       link: "https://drive.google.com/file/d/1Uc9muft_8b9gL6oNjYs4Vyjahvm0mwMX/view",
       tags: ["Kotlin", "Jetpack Compose", "Retrofit", "MVVM", "Room"],
     },
@@ -25,7 +25,7 @@ export const certificates = [
       date: "Dec 2024 - 2027",
       description:
         "Advanced certification focusing on performance optimization, accessibility, and modern frontend tooling.",
-      image: "/certificates/android_intermediate.png",
+      image: "/certificates/android_intermediate.webp",
       link: "https://www.dicoding.com/certificates/07Z6414WWPQR",
       tags: ["Kotlin", "Retrofit", "MVVM", "Room"],
     },
@@ -35,7 +35,7 @@ export const certificates = [
       date: "Sep 2025 - 2028",
       description:
         "Advanced certification focusing on performance optimization, accessibility, and modern frontend tooling.",
-      image: "/certificates/backend.png",
+      image: "/certificates/backend.webp",
       link: "https://www.dicoding.com/certificates/98XWOGEMLZM3",
       tags: ["Hapi.js", "Redis", "RabbitMQ", "Mailer"],
     },

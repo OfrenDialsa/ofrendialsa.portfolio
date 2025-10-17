@@ -5,7 +5,7 @@ export const work = [
         badges: [],
         location: "Onsite",
         title: "Fullstack Developer - Intern",
-        logoUrl: "/bbpj.png",
+        logoUrl: "/work/bbpj.webp",
         start: "July 2025",
         end: "Sept 2025",
         description:
@@ -17,7 +17,7 @@ export const work = [
         href: "https://amanahcorp.co.id/",
         location: "Remote",
         title: "Android Developer - Bangkit Company Track Capstone",
-        logoUrl: "/amanah.png",
+        logoUrl: "/work/amanah.webp",
         start: "Nov 2024",
         end: "Dec 2024",
         description:
