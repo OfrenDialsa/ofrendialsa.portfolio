@@ -17,7 +17,7 @@ export const DATA = {
     "an Information Systems undergraduate at Jambi University with a strong interest in technology and innovation.",
   summary:
     "I have experience in software development, including mobile, web, and backend projects, gained through programs like Bangkit Academy and AWS Backend Academy 2025. I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.webp",
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
