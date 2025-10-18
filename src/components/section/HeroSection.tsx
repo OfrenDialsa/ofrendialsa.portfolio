@@ -26,7 +26,7 @@ export default function HeroSection() {
           </div>
 
           <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="flex justify-center items-center size-32 md:size-52 -translate-y-6 md:-translate-y-8">
+            <div className="flex justify-center items-center size-32 md:size-40 -translate-y-6 md:-translate-y-8">
               <Lanyard />
             </div>
           </BlurFade>
