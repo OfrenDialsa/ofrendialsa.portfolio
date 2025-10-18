@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function CertiSection() {
   return (
     <section id="certificates">
-      <div className="space-y-12 w-full py-12">
+      <div className="space-y-12 w-full">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">

@@ -1,16 +1,16 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
 import { BLUR_FADE_DELAY } from "@/lib/utils";
+import Lanyard from "../Lanyard";
 
 export default function HeroSection() {
   return (
     <section id="hero">
       <div className="mx-auto w-full max-w-2xl space-y-8">
-        <div className="gap-2 flex justify-between">
+        <div className="gap-2 flex justify-between items-center">
           <div className="flex-col flex flex-1 space-y-1.5">
             <BlurFadeText
               delay={BLUR_FADE_DELAY}
@@ -24,11 +24,11 @@ export default function HeroSection() {
               text={DATA.description}
             />
           </div>
+
           <BlurFade delay={BLUR_FADE_DELAY}>
-            <Avatar className="size-28 border">
-              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-              <AvatarFallback>{DATA.initials}</AvatarFallback>
-            </Avatar>
+            <div className="flex justify-center items-center size-32 md:size-40 -translate-y-6 md:-translate-y-8">
+              <Lanyard />
+            </div>
           </BlurFade>
         </div>
       </div>
