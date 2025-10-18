@@ -5,17 +5,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
-// ✅ generateStaticParams tetap async biasa
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-// ✅ generateMetadata perlu "await params" (karena di Next.js 15 params = Promise)
 export async function generateMetadata(
-  props: { params: Promise<{ slug: string }> }
+  { params }: { params: Promise<{ slug: string }> }
 ): Promise<Metadata | undefined> {
-  const { slug } = await props.params;
+  const { slug } = await params;
   const post = await getPost(slug);
 
   if (!post) return;
@@ -47,20 +45,18 @@ export async function generateMetadata(
   };
 }
 
-// ✅ Komponen utama Page: params bukan Promise
 export default async function Blog({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = await getPost(slug);
 
   if (!post) notFound();
 
   return (
     <section id="blog">
-      {/* Structured Data / SEO JSON-LD */}
       <script
         type="application/ld+json"
         suppressHydrationWarning
