@@ -50,19 +50,19 @@ export default function ContactSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6 w-full px-2">
             <SocialButton
-              href="https://github.com/ofrendialsa"
+              href="https://github.com/OfrenDialsa"
               icon={<GitHubLogoIcon className="w-4 h-4" />}
               label="GitHub"
             />
 
             <SocialButton
-              href="https://linkedin.com/in/ofrendialsa"
+              href="https://www.linkedin.com/in/ofren-dialsa/"
               icon={<LinkedInLogoIcon className="w-4 h-4" />}
               label="LinkedIn"
             />
 
             <SocialButton
-              href="https://instagram.com/ofrendialsa"
+              href="https://instagram.com/ofren_"
               icon={<InstagramLogoIcon className="w-4 h-4" />}
               label="Instagram"
             />
