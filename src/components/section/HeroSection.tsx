@@ -18,7 +18,7 @@ export default function HeroSection() {
                 delay={BLUR_FADE_DELAY}
                 className="text-4xl sm:text-5xl xl:text-5xl font-bold tracking-tighter"
                 yOffset={8}
-                text={`Hi, I'm`}
+                text={`Hi, I'm `}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 11}>
                 <RotatingText
@@ -32,7 +32,7 @@ export default function HeroSection() {
                     rounded-lg 
                     text-4xl sm:text-5xl xl:text-5xl font-bold 
                     leading-none
-                    transition-colors duration-300
+                    transition-colors duration-300 translate-y-2
                   `}
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
