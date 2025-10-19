@@ -15,7 +15,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="px-4 sm:px-6 py-12 md:py-20 bg-background"
+      className="px-4 sm:px-6 pb-12 md:pb-20 bg-background"
     >
       <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
