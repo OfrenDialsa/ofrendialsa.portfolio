@@ -16,17 +16,5 @@ export const contact = {
       icon: Icons.linkedin,
       navbar: true,
     },
-    Instagram: {
-      name: "Instagram",
-      url: "https://www.instagram.com/ofren_",
-      icon: Icons.instagram,
-      navbar: true,
-    },
-    email: {
-      name: "Send Email",
-      url: "ofrendialsa.work@gmail.com",
-      icon: Icons.email,
-      navbar: true,
-    },
   },
 };
