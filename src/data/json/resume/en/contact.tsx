@@ -16,23 +16,17 @@ export const contact = {
       icon: Icons.linkedin,
       navbar: true,
     },
-    X: {
-      name: "X",
-      url: "https://dub.sh/dillion-twitter",
-      icon: Icons.x,
-      navbar: true,
-    },
-    Youtube: {
-      name: "Youtube",
-      url: "https://dub.sh/dillion-youtube",
-      icon: Icons.youtube,
+    Instagram: {
+      name: "Instagram",
+      url: "https://www.instagram.com/ofren_",
+      icon: Icons.instagram,
       navbar: true,
     },
     email: {
       name: "Send Email",
       url: "ofrendialsa.work@gmail.com",
       icon: Icons.email,
-      navbar: false,
+      navbar: true,
     },
   },
 };

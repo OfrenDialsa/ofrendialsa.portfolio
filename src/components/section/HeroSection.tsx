@@ -8,10 +8,10 @@ import Lanyard from "../Lanyard";
 
 export default function HeroSection() {
   return (
-    <section id="hero">
-      <div className="mx-auto w-full max-w-2xl space-y-8">
-        <div className="gap-2 flex justify-between items-center">
-          <div className="flex-col flex flex-1 space-y-1.5">
+    <section id="hero" className="relative overflow-visible">
+      <div className="mx-auto w-full max-w-2xl space-y-8 relative">
+        <div className="gap-2 flex justify-between items-center relative">
+          <div className="flex-col flex flex-1 space-y-1.5 relative z-10">
             <BlurFadeText
               delay={BLUR_FADE_DELAY}
               className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
@@ -26,7 +26,13 @@ export default function HeroSection() {
           </div>
 
           <BlurFade delay={BLUR_FADE_DELAY}>
-            <div className="flex justify-center items-center size-32 md:size-40 -translate-y-6 md:-translate-y-8">
+            <div
+              className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
+              style={{
+                pointerEvents: "auto",
+                isolation: "isolate",
+              }}
+            >
               <Lanyard />
             </div>
           </BlurFade>

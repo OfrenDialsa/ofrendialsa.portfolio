@@ -1,11 +1,11 @@
-import { HomeIcon } from "lucide-react";
-import { contact } from "./json/resume/contact";
-import { work } from "./json/resume/work";
-import { education } from "./json/resume/education";
-import { projects } from "./json/resume/projects";
-import { bootcamps } from "./json/resume/bootcamps";
-import { skills } from "./json/resume/skills";
-import { certificates } from "./json/resume/certificates";
+import { AwardIcon, CodeIcon, FolderIcon, HomeIcon } from "lucide-react";
+import { contact } from "./json/resume/en/contact";
+import { work } from "./json/resume/en/work";
+import { education } from "./json/resume/en/education";
+import { projects } from "./json/resume/en/projects";
+import { bootcamps } from "./json/resume/en/bootcamps";
+import { skills } from "./json/resume/en/skills";
+import { certificates } from "./json/resume/en/certificates";
 
 export const DATA = {
   name: "Ofren Dialsa",
@@ -19,8 +19,10 @@ export const DATA = {
     "I have experience in software development, including mobile, web, and backend projects, gained through programs like Bangkit Academy and AWS Backend Academy 2025. I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions.",
   avatarUrl: "/me.webp",
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "#hero", icon: HomeIcon, label: "Home" },
+    { href: "#projects", icon: FolderIcon, label: "Projects" },
+    { href: "#bootcamps", icon: CodeIcon, label: "Bootcamps" },
+    { href: "#certificates", icon: AwardIcon, label: "Certificates" },
   ],
 
   skills: skills,
