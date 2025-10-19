@@ -7,7 +7,6 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { ArrowUpRight } from "lucide-react";
 import { BLUR_FADE_DELAY } from "@/lib/utils";
 import { SocialButton } from "../ui/social-button";
 
