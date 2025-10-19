@@ -1,4 +1,4 @@
-import { AwardIcon, CodeIcon, FolderIcon, HomeIcon } from "lucide-react";
+import { AwardIcon, Code2Icon, CodeIcon, FolderIcon, HomeIcon } from "lucide-react";
 import { contact } from "./json/resume/en/contact";
 import { work } from "./json/resume/en/work";
 import { education } from "./json/resume/en/education";
@@ -16,12 +16,12 @@ export const DATA = {
   description:
     "an Information Systems undergraduate at Jambi University with a strong interest in technology and innovation.",
   summary:
-    "I have experience in software development, including mobile, web, and backend projects, gained through programs like Bangkit Academy and AWS Backend Academy 2025. I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions.",
+    "I have experience in software development, including mobile, web, and backend projects, gained through internship and programs like [Bangkit Academy](#bootcamps) and [AWS Backend Academy 2025](#bootcamps). I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions.",
   avatarUrl: "/me.webp",
   navbar: [
     { href: "#hero", icon: HomeIcon, label: "Home" },
     { href: "#projects", icon: FolderIcon, label: "Projects" },
-    { href: "#bootcamps", icon: CodeIcon, label: "Bootcamps" },
+    { href: "#bootcamps", icon: Code2Icon, label: "Bootcamps" },
     { href: "#certificates", icon: AwardIcon, label: "Certificates" },
   ],
 
