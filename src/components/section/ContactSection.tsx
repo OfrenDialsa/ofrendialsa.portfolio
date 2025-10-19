@@ -1,27 +1,33 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
-import { DATA } from "@/data/resume";
-import { BLUR_FADE_DELAY } from "@/lib/utils";
 import Link from "next/link";
-import { Github, Linkedin, Instagram, PointerIcon, ArrowUpRight } from "lucide-react";
-import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
+import { BLUR_FADE_DELAY } from "@/lib/utils";
+import { SocialButton } from "../ui/social-button";
 
 export default function ContactSection() {
   return (
-    <section id="contact">
-      <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full pb-12">
+    <section
+      id="contact"
+      className="px-4 sm:px-6 pb-12 md:pb-20 bg-background"
+    >
+      <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <div className="space-y-3">
             <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
               Contact
             </div>
 
-            <h2 className="text-3xl font-bold mb-5 tracking-tighter sm:text-5xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 tracking-tight">
               Get in Touch
             </h2>
 
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="mx-auto max-w-[600px] text-muted-foreground text-base sm:text-lg leading-relaxed px-2">
               Feel free to contact me directly for{" "}
               <span className="font-semibold text-foreground">
                 work or freelance
@@ -29,7 +35,7 @@ export default function ContactSection() {
               at{" "}
               <Link
                 href="mailto:ofrendialsa.work@gmail.com"
-                className="text-black hover:underline"
+                className="text-black dark:text-white underline underline-offset-4 hover:text-primary transition-colors"
               >
                 ofrendialsa.work@gmail.com
               </Link>
@@ -37,44 +43,28 @@ export default function ContactSection() {
             </p>
           </div>
 
-          <p className="text-muted-foreground mt-6 text-2sm">
-              or you can dm me directly at:
-            </p>
+          <p className="text-muted-foreground mt-8 text-sm sm:text-base">
+            or you can DM me directly at:
+          </p>
 
-          {/* Social badges */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <Link
-              href="https://github.com/ofrendialsa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium hover:bg-muted transition"
-            >
-              <GitHubLogoIcon className="w-4 h-4" />
-              GitHub
-              <ArrowUpRight className="w-4 h-4"/>
-            </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6 w-full px-2">
+            <SocialButton
+              href="https://github.com/OfrenDialsa"
+              icon={<GitHubLogoIcon className="w-4 h-4" />}
+              label="GitHub"
+            />
 
-            <Link
-              href="https://linkedin.com/in/ofrendialsa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium hover:bg-muted transition"
-            >
-              <LinkedInLogoIcon className="w-4 h-4" />
-              LinkedIn
-              <ArrowUpRight className="w-4 h-4"/>
-            </Link>
+            <SocialButton
+              href="https://www.linkedin.com/in/ofren-dialsa/"
+              icon={<LinkedInLogoIcon className="w-4 h-4" />}
+              label="LinkedIn"
+            />
 
-            <Link
-              href="https://instagram.com/ofrendialsa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium hover:bg-muted transition"
-            >
-              <InstagramLogoIcon className="w-4 h-4" />
-              Instagram
-              <ArrowUpRight className="w-4 h-4"/>
-            </Link>
+            <SocialButton
+              href="https://instagram.com/ofren_"
+              icon={<InstagramLogoIcon className="w-4 h-4" />}
+              label="Instagram"
+            />
           </div>
         </BlurFade>
       </div>

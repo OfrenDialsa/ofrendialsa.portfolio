@@ -48,7 +48,7 @@ export default function ProjectSection() {
       </div>
       <BlurFade delay={BLUR_FADE_DELAY * 20}>
         <div className="text-center text-muted-foreground text-sm sm:text-base">
-          {"Note: Still more project to come :)"}
+          {"Note: Still more projects I haven't published yet :)"}
         </div>
       </BlurFade>
     </section>

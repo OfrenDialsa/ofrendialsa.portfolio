@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 
 export const contact = {
-  email: "ofrendialsa.work.com",
+  email: "ofrendialsa.work@gmail.com",
   tel: "+62 821 2546 1169",
   social: {
     GitHub: {
@@ -16,15 +16,9 @@ export const contact = {
       icon: Icons.linkedin,
       navbar: true,
     },
-    Instagram: {
-      name: "Instagram",
-      url: "https://www.instagram.com/ofren_",
-      icon: Icons.instagram,
-      navbar: true,
-    },
     email: {
       name: "Send Email",
-      url: "ofrendialsa.work@gmail.com",
+      url: "mailto:ofrendialsa.work@gmail.com",
       icon: Icons.email,
       navbar: true,
     },
