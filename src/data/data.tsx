@@ -1,11 +1,5 @@
 import { AwardIcon, Code2Icon, CodeIcon, FolderIcon, HomeIcon } from "lucide-react";
-import { contact } from "./json/resume/en/contact";
-import { work } from "./json/resume/en/work";
-import { education } from "./json/resume/en/education";
-import { projects } from "./json/resume/en/projects";
-import { bootcamps } from "./json/resume/en/bootcamps";
-import { skills } from "./json/resume/en/skills";
-import { certificates } from "./json/resume/en/certificates";
+import { resumeData } from "./resume/resumeData";
 
 export const DATA = {
   name: "Ofren Dialsa",
@@ -25,11 +19,5 @@ export const DATA = {
     { href: "#certificates", icon: AwardIcon, label: "Certificates" },
   ],
 
-  skills: skills,
-  contact: contact,
-  work: work,
-  education: education,
-  projects: projects,
-  bootcamps: bootcamps,
-  certificates: certificates
+  ...resumeData
 } as const;

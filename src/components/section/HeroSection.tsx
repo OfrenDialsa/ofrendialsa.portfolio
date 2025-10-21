@@ -2,7 +2,7 @@
 
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import BlurFade from "@/components/magicui/blur-fade";
-import { DATA } from "@/data/resume";
+import { DATA } from "@/data/data";
 import { BLUR_FADE_DELAY } from "@/lib/utils";
 import Lanyard from "../Lanyard";
 import RotatingText from "../RotatingText";

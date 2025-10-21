@@ -2,10 +2,9 @@
 
 import BlurFade from "@/components/magicui/blur-fade";
 import { BLUR_FADE_DELAY } from "@/lib/utils";
-import { DATA } from "@/data/resume";
+import { DATA } from "@/data/data";
 import { CertificateCard } from "@/components/certificate-card";
 import Link from "next/link";
-import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 export default function CertiSection() {
   return (

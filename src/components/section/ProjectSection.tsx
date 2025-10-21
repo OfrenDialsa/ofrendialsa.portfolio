@@ -1,7 +1,7 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
-import { DATA } from "@/data/resume";
+import { DATA } from "@/data/data";
 import { BLUR_FADE_DELAY } from "@/lib/utils";
 import { ProjectCard } from "../project-card";
 
