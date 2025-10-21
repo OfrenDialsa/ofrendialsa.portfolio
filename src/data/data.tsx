@@ -1,4 +1,4 @@
-import { AwardIcon, Code2Icon, CodeIcon, FolderIcon, HomeIcon } from "lucide-react";
+import { AwardIcon, Code2Icon, FolderIcon, HomeIcon } from "lucide-react";
 import { resumeData } from "./resume/resumeData";
 
 export const DATA = {
