@@ -10,9 +10,9 @@ import { certificates } from "./json/resume/en/certificates";
 export const DATA = {
   name: "Ofren Dialsa",
   initials: "OD",
-  url: "https://ofrendialsa.site",
+  url: "https://codefren.site",
   location: "Kerinci, Jambi, Indonesia",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/Jambi",
   description:
     "an Information Systems undergraduate at Jambi University with a strong interest in technology and innovation.",
   summary:
