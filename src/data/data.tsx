@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "an Information Systems undergraduate at Jambi University with a strong interest in technology and innovation.",
   summary:
-    "I have experience in software development, including mobile, web, and backend projects, gained through internship and programs like [Bangkit Academy](#bootcamps) and [AWS Backend Academy 2025](#bootcamps). I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions.",
+    "I have experience in software development across mobile, web, and backend projects, gained through internship and programs like [Bangkit Academy](#bootcamps) and [AWS Backend Academy](#bootcamps). I enjoy learning new technologies, solving real-world problems, and collaborating to build impactful digital solutions. feel free to [get in touch](#contact)",
   avatarUrl: "/me.webp",
   navbar: [
     { href: "#hero", icon: HomeIcon, label: "Home" },
