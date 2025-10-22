@@ -1,11 +1,3 @@
-import { BootcampsCard } from "@/components/bootcamps-card";
-import { CertificateCard } from "@/components/certificate-card";
-import Lanyard from "@/components/Lanyard";
-import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
-import { ResumeCard } from "@/components/resume-card";
-import RotatingText from "@/components/RotatingText";
 import { Badge } from "@/components/ui/badge";
 import { SocialButton } from "@/components/ui/social-button";
 import { DATA } from "@/data/data";
@@ -17,6 +9,19 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import dynamic from "next/dynamic";
+import LazySection from "@/components/LazySection";
+
+const Lanyard = dynamic(() => import("@/components/Lanyard"));
+const RotatingText = dynamic(() => import("@/components/RotatingText"));
+const BlurFade = dynamic(() => import("@/components/magicui/blur-fade"));
+const BlurFadeText = dynamic(
+  () => import("@/components/magicui/blur-fade-text")
+);
+const ProjectCard = dynamic(() => import("@/components/project-card"));
+const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"));
+const CertificateCard = dynamic(() => import("@/components/certificate-card"));
+const ResumeCard = dynamic(() => import("@/components/resume-card"));
 
 export default function Page() {
   return (
@@ -157,6 +162,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <LazySection>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -203,6 +209,8 @@ export default function Page() {
           </div>
         </BlurFade>
       </section>
+      </LazySection>
+      <LazySection>
       <section id="bootcamps">
         <div className="space-y-12 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -244,6 +252,8 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      </LazySection>
+      <LazySection>
       <section id="certificates">
         <div className="space-y-12 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -292,6 +302,8 @@ export default function Page() {
           </div>
         </BlurFade>
       </section>
+      </LazySection>
+      <LazySection>
       <section
         id="contact"
         className="px-4 sm:px-6 pb-12 md:pb-20 bg-background"
@@ -349,6 +361,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      </LazySection>
     </main>
   );
 }

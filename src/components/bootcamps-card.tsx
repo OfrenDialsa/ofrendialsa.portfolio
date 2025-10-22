@@ -21,7 +21,7 @@ interface Props {
   }[];
 }
 
-export function BootcampsCard({
+export default function BootcampsCard({
   title,
   description,
   dates,

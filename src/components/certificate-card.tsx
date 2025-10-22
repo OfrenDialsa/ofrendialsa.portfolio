@@ -22,7 +22,7 @@ interface Props {
   className?: string;
 }
 
-export function CertificateCard({
+export default function CertificateCard({
   title,
   organization,
   date,
