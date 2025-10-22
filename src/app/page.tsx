@@ -64,7 +64,6 @@ export default function Page() {
                 />
               </div>
 
-              {/* Deskripsi */}
               <BlurFadeText
                 className="max-w-[600px] md:text-lg"
                 delay={BLUR_FADE_DELAY + 0.2}
@@ -72,7 +71,6 @@ export default function Page() {
               />
             </div>
 
-            {/* Lanyard di kanan */}
             <BlurFade delay={BLUR_FADE_DELAY}>
               <div
                 className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
@@ -331,7 +329,7 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6 w-full px-2">
               <SocialButton
-                href="https://github.com/OfrenDialsa"
+                href="https://www.github.com/OfrenDialsa"
                 icon={<GitHubLogoIcon className="w-4 h-4" />}
                 label="GitHub"
               />
@@ -343,7 +341,7 @@ export default function Page() {
               />
 
               <SocialButton
-                href="https://instagram.com/ofren_"
+                href="https://www.instagram.com/ofren_"
                 icon={<InstagramLogoIcon className="w-4 h-4" />}
                 label="Instagram"
               />

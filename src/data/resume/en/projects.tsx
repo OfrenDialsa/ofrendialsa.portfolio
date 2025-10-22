@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons";
 export const projects = [
   {
     title: "NeroBot",
-    href: "https://github.com/OfrenDialsa/NeroBot",
+    href: "https://www.github.com/OfrenDialsa/NeroBot",
     dates: "Jan 2025 - Present",
     active: true,
     description:
@@ -19,7 +19,7 @@ export const projects = [
     links: [
       {
         type: "Source Code",
-        href: "https://github.com/OfrenDialsa/NeroBot",
+        href: "https://www.github.com/OfrenDialsa/NeroBot",
         icon: <Icons.github className="size-3" />,
       },
     ],

@@ -4,7 +4,7 @@ import { resumeData } from "./resume/resumeData";
 export const DATA = {
   name: "Ofren Dialsa",
   initials: "OD",
-  url: "https://codefren.site",
+  url: "https://www.codefren.site",
   location: "Kerinci, Jambi, Indonesia",
   locationLink: "https://www.google.com/maps/place/Jambi",
   description:

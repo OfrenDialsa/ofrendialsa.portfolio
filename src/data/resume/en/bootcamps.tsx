@@ -23,8 +23,8 @@ export const bootcamps = [
     location: "Remote",
     description:
       "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-    image: "https://avatars.githubusercontent.com/u/104053483?s=200&v=4",
-    mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+    image: "https://www.avatars.githubusercontent.com/u/104053483?s=200&v=4",
+    mlh: "https://www.s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
     links: [],
   },
 ];
