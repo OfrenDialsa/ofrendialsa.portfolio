@@ -6,7 +6,7 @@ export const contact = {
   social: {
     GitHub: {
       name: "GitHub",
-      url: "https://github.com/OfrenDialsa",
+      url: "https://www.github.com/OfrenDialsa",
       icon: Icons.github,
       navbar: true,
     },
