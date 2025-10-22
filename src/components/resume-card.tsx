@@ -19,7 +19,7 @@ interface ResumeCardProps {
   period: string;
   description?: string;
 }
-export const ResumeCard = ({
+export default function ResumeCard({
   logoUrl,
   altText,
   title,
@@ -28,7 +28,7 @@ export const ResumeCard = ({
   badges,
   period,
   description,
-}: ResumeCardProps) => {
+}: ResumeCardProps) {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
