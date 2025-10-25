@@ -26,6 +26,7 @@ const ResumeCard = dynamic(() => import("@/components/resume-card"));
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <LazySection>
       <section id="hero" className="relative overflow-visible">
         <div className="mx-auto w-full max-w-2xl space-y-8 relative">
           <div className="gap-2 flex justify-between items-center relative">
@@ -76,22 +77,21 @@ export default function Page() {
               />
             </div>
 
-            <BlurFade delay={BLUR_FADE_DELAY * 12}>
-              <div
-                className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
-                style={{
-                  pointerEvents: "auto",
-                  isolation: "isolate",
-                }}
-              >
-                <LazySection>
+              <BlurFade delay={BLUR_FADE_DELAY * 12}>
+                <div
+                  className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
+                  style={{
+                    pointerEvents: "auto",
+                    isolation: "isolate",
+                  }}
+                >
                   <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
-                </LazySection>
-              </div>
-            </BlurFade>
+                </div>
+              </BlurFade>
           </div>
         </div>
       </section>
+      </LazySection>
 
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
