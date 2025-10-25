@@ -11,12 +11,32 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
-
-import { Lanyard, RotatingText, BlurFade, BlurFadeText } from "@/components/client-page";
-const ProjectCard = dynamic(() => import("@/components/project-card"));
-const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"));
-const CertificateCard = dynamic(() => import("@/components/certificate-card"));
-const ResumeCard = dynamic(() => import("@/components/resume-card"));
+import {
+  Lanyard,
+  RotatingText,
+  BlurFade,
+  BlurFadeText,
+} from "@/components/client-page";
+const ProjectCard = dynamic(() => import("@/components/project-card"), {
+  loading: () => (
+    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
+  ),
+});
+const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"), {
+  loading: () => (
+    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
+  ),
+});
+const CertificateCard = dynamic(() => import("@/components/certificate-card"), {
+  loading: () => (
+    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
+  ),
+});
+const ResumeCard = dynamic(() => import("@/components/resume-card"), {
+  loading: () => (
+    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
+  ),
+});
 
 export default function Page() {
   return (
