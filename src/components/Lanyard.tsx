@@ -13,7 +13,7 @@ import {
   RigidBodyProps
 } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
-import * as THREE from 'three';
+import { Color, Vector3, CatmullRomCurve3, RepeatWrapping } from 'three';
 
 const cardGLB = '/assets/lanyard/card.glb';
 const lanyard = '/assets/lanyard/lanyard.png';
@@ -38,7 +38,7 @@ export default function Lanyard({
       <Canvas
         camera={{ position, fov }}
         gl={{ alpha: transparent }}
-        onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
+        onCreated={({ gl }) => gl.setClearColor(new Color(0x000000), transparent ? 0 : 1)}
       >
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>
@@ -92,10 +92,10 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   const j3 = useRef<any>(null);
   const card = useRef<any>(null);
 
-  const vec = new THREE.Vector3();
-  const ang = new THREE.Vector3();
-  const rot = new THREE.Vector3();
-  const dir = new THREE.Vector3();
+  const vec = new Vector3();
+  const ang = new Vector3();
+  const rot = new Vector3();
+  const dir = new Vector3();
 
   const segmentProps: any = {
     type: 'dynamic' as RigidBodyProps['type'],
@@ -109,9 +109,9 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
-      new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
+      new CatmullRomCurve3([new Vector3(), new Vector3(), new Vector3(), new Vector3()])
   );
-  const [dragged, drag] = useState<false | THREE.Vector3>(false);
+  const [dragged, drag] = useState<false | Vector3>(false);
   const [hovered, hover] = useState(false);
 
   const [isSmall, setIsSmall] = useState<boolean>(() => {
@@ -161,7 +161,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
     }
     if (fixed.current) {
       [j1, j2].forEach(ref => {
-        if (!ref.current.lerped) ref.current.lerped = new THREE.Vector3().copy(ref.current.translation());
+        if (!ref.current.lerped) ref.current.lerped = new Vector3().copy(ref.current.translation());
         const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(ref.current.translation())));
         ref.current.lerped.lerp(
           ref.current.translation(),
@@ -180,7 +180,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   });
 
   curve.curveType = 'chordal';
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  texture.wrapS = texture.wrapT = RepeatWrapping;
 
   return (
     <>
@@ -213,7 +213,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
             }}
             onPointerDown={(e: any) => {
               e.target.setPointerCapture(e.pointerId);
-              drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation())));
+              drag(new Vector3().copy(e.point).sub(vec.copy(card.current.translation())));
             }}
           >
             <mesh geometry={nodes.card.geometry}>
