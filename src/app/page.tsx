@@ -11,32 +11,17 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
-import {
-  Lanyard,
-  RotatingText,
-  BlurFade,
-  BlurFadeText,
-} from "@/components/client-page";
-const ProjectCard = dynamic(() => import("@/components/project-card"), {
-  loading: () => (
-    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
-  ),
-});
-const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"), {
-  loading: () => (
-    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
-  ),
-});
-const CertificateCard = dynamic(() => import("@/components/certificate-card"), {
-  loading: () => (
-    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
-  ),
-});
-const ResumeCard = dynamic(() => import("@/components/resume-card"), {
-  loading: () => (
-    <div className="aspect-[16/9] bg-muted animate-pulse rounded-lg" />
-  ),
-});
+
+const Lanyard = dynamic(() => import("@/components/Lanyard"));
+const RotatingText = dynamic(() => import("@/components/RotatingText"));
+const BlurFade = dynamic(() => import("@/components/magicui/blur-fade"));
+const BlurFadeText = dynamic(
+  () => import("@/components/magicui/blur-fade-text")
+);
+const ProjectCard = dynamic(() => import("@/components/project-card"));
+const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"));
+const CertificateCard = dynamic(() => import("@/components/certificate-card"));
+const ResumeCard = dynamic(() => import("@/components/resume-card"));
 
 export default function Page() {
   return (
@@ -47,25 +32,26 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-3 relative z-10">
               <div className="flex items-center flex-wrap gap-2 leading-none">
                 <BlurFadeText
-                  delay={BLUR_FADE_DELAY * 1}
+                  delay={BLUR_FADE_DELAY * 3}
                   className="text-4xl sm:text-5xl xl:text-5xl font-bold tracking-tighter"
                   yOffset={8}
                   text={`Hi, I'm `}
                 />
-                <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <BlurFade delay={BLUR_FADE_DELAY * 13}>
+                  {" "}
                   <RotatingText
                     texts={["Ofren", "Dialsa"]}
                     mainClassName={`
-                inline-flex items-center justify-center
-                px-3 sm:px-3 md:px-4 
-                bg-black text-white 
-                dark:bg-white dark:text-black
-                overflow-hidden py-0.5 sm:py-1 md:py-1.5 
-                rounded-lg 
-                text-4xl sm:text-5xl xl:text-5xl font-bold 
-                leading-none
-                transition-colors duration-300 translate-y-2
-              `}
+              inline-flex items-center justify-center
+              px-3 sm:px-3 md:px-4 
+              bg-black text-white 
+              dark:bg-white dark:text-black
+              overflow-hidden py-0.5 sm:py-1 md:py-1.5 
+              rounded-lg 
+              text-4xl sm:text-5xl xl:text-5xl font-bold 
+              leading-none
+              transition-colors duration-300 translate-y-2
+            `}
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
@@ -86,48 +72,45 @@ export default function Page() {
 
               <BlurFadeText
                 className="max-w-[600px] md:text-lg"
-                delay={BLUR_FADE_DELAY * 4}
+                delay={BLUR_FADE_DELAY * 3 + 0.2}
                 text={DATA.description}
               />
             </div>
 
-            <BlurFade delay={BLUR_FADE_DELAY * 12}>
-              <div
-                className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
-                style={{
-                  pointerEvents: "auto",
-                  isolation: "isolate",
-                }}
-              >
-                <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
-              </div>
-            </BlurFade>
+            <div
+              className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
+              style={{
+                pointerEvents: "auto",
+                isolation: "isolate",
+              }}
+            >
+              <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
+            </div>
           </div>
         </div>
       </section>
-
       <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+        <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 6}>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
       </section>
-
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
             <BlurFade
               key={work.company}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
+                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -141,18 +124,18 @@ export default function Page() {
           ))}
         </div>
       </section>
-
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
             <BlurFade
               key={education.school}
-              delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
             >
               <ResumeCard
+                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -164,22 +147,20 @@ export default function Page() {
           ))}
         </div>
       </section>
-
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 11.5 + id * 0.05}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
-
       <LazySection>
         <section id="projects">
           <div className="space-y-12 w-full py-12">
