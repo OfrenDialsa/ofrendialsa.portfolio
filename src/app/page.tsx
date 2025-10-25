@@ -12,12 +12,7 @@ import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
 
-const Lanyard = dynamic(() => import("@/components/Lanyard"));
-const RotatingText = dynamic(() => import("@/components/RotatingText"));
-const BlurFade = dynamic(() => import("@/components/magicui/blur-fade"));
-const BlurFadeText = dynamic(
-  () => import("@/components/magicui/blur-fade-text")
-);
+import { Lanyard, RotatingText, BlurFade, BlurFadeText } from "@/components/client-page";
 const ProjectCard = dynamic(() => import("@/components/project-card"));
 const BootcampsCard = dynamic(() => import("@/components/bootcamps-card"));
 const CertificateCard = dynamic(() => import("@/components/certificate-card"));
@@ -76,17 +71,17 @@ export default function Page() {
               />
             </div>
 
-              <BlurFade delay={BLUR_FADE_DELAY * 12}>
-                <div
-                  className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
-                  style={{
-                    pointerEvents: "auto",
-                    isolation: "isolate",
-                  }}
-                >
-                  <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
-                </div>
-              </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 12}>
+              <div
+                className="flex justify-center items-center bg-transparent size-32 md:size-40 -translate-y-6 md:-translate-y-8 relative z-0"
+                style={{
+                  pointerEvents: "auto",
+                  isolation: "isolate",
+                }}
+              >
+                <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
+              </div>
+            </BlurFade>
           </div>
         </div>
       </section>
