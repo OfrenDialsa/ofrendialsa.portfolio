@@ -84,7 +84,9 @@ export default function Page() {
                   isolation: "isolate",
                 }}
               >
-                <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
+                <LazySection>
+                  <Lanyard position={[0, 0, 32]} gravity={[0, -40, 0]} />
+                </LazySection>
               </div>
             </BlurFade>
           </div>
