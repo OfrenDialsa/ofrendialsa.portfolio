@@ -11,8 +11,9 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import dynamic from "next/dynamic";
 import LazySection from "@/components/LazySection";
-import { Lanyard, RotatingText } from "@/components/client-page";
 
+const Lanyard = dynamic(() => import("@/components/Lanyard"));
+const RotatingText = dynamic(() => import("@/components/RotatingText"));
 const BlurFade = dynamic(() => import("@/components/magicui/blur-fade"));
 const BlurFadeText = dynamic(
   () => import("@/components/magicui/blur-fade-text")
