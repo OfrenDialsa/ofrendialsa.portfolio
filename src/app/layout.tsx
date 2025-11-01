@@ -8,6 +8,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { AnalyticsTracker } from "@/components/analytic-tracker";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -81,8 +82,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
-            <Navbar />
-            <AnalyticsTracker />
+            <Suspense fallback={null}>
+              <Navbar />
+              <AnalyticsTracker />
+            </Suspense>
           </TooltipProvider>
         </ThemeProvider>
       </body>
