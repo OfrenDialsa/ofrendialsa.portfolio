@@ -146,7 +146,7 @@ export const projects = [
         links: [
           {
             type: "Live website",
-            href: "https://dev.ezfiles.ai/",
+            href: "https://ezfiles.ai/",
             icon: <Globe className="size-3" />,
           },
         ],
